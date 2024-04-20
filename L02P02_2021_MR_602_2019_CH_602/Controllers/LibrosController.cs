@@ -38,15 +38,14 @@ namespace L02P02_2021_MR_602_2019_CH_602.Controllers
             return View("Index", libros);
         }
 
-
-
         // Acción para mostrar el formulario de comentarios existentes del libro seleccionado
         public IActionResult ViewComments(int bookId)
         {
             var comentarios = _context.comentarios_libros.Where(c => c.id_libro == bookId).ToList();
-            return View(comentarios);
+            return View("~/Views/Comentario/Index.cshtml", comentarios);
         }
 
     }
 }
+
 

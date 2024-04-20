@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace L02P02_2021_MR_602_2019_CH_602.Models
 {
@@ -9,6 +10,7 @@ namespace L02P02_2021_MR_602_2019_CH_602.Models
         public int? id_libro { get; set; }
         public string? comentarios { get; set; }
         public string? usuario { get; set; }
-        public DateOnly? created_at { get; set; }
+        public DateTime? created_at { get; set; } // Cambio de DateOnly? a DateTime?
     }
 }
+
