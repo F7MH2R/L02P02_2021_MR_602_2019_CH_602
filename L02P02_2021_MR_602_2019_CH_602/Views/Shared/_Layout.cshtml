@@ -10,25 +10,32 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">L02P02_2021_MR_602_2019_CH_602</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+                <div class="navbar-brand text-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <!-- Logo -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/UNICAES_Logo.png/800px-UNICAES_Logo.png" alt="Logo" height="80">
+                        <!-- Texto -->
+                        <span>Comentarios por Libros</span>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+                <div class="collapse navbar-collapse justify-content-center text-center" id="navbarNav">
+                    <span class="navbar-text d-block">Seleccionar el Autor </span>
+                    <span class="navbar-text d-block"> -> </span>
+                    <span class="navbar-text d-block">Seleccione el Libro </span>
+                    <span class="navbar-text d-block"> -></span>
+                    <span class="navbar-text d-block">Se muestran los comentarios existentes </span>
+                    <span class="navbar-text d-block"> -> </span>
+                    <span class="navbar-text d-block">Adicione un nuevo comentario</span>
                 </div>
             </div>
         </nav>
+
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -36,9 +43,12 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - L02P02_2021_MR_602_2019_CH_602 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer text-muted bg-dark">
+        <div class="container text-center">
+            2021-MR-602 FERNANDO HERIBERTO MUSTO RAMÍREZ -
+        </div>
+        <div class="container text-center">
+            2019-CH-602 CARLOS LEONEL CASTANEDA HERNANDEZ -
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

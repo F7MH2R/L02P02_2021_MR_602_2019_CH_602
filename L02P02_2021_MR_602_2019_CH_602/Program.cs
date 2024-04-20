@@ -1,7 +1,17 @@
+using L02P02_2021_MR_602_2019_CH_602.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<Context_Libreria>(
+    options => options.UseSqlServer(
+        builder.Configuration.GetConnectionString(
+            "LibreriaConnect")
+        )
+    );
 
 var app = builder.Build();
 
