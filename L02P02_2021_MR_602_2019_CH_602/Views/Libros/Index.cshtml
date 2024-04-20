@@ -3,25 +3,43 @@
     ViewBag.Title = "Libros";
 }
 
-<div style="border: 1px solid black; padding: 10px; margin-bottom: 20px;">
-    <p style="margin-bottom: 10px;">Autor: @ViewBag.AuthorName</p>
-</div>
-
-<div style="border: 1px solid black; padding: 10px;">
-    <p style="margin-bottom: 10px;">Seleccione el libro del autor:</p>
-    <ul style="list-style-type: none; padding: 0;">
-        @foreach (var libro in Model)
-        {
-            <li style="margin-bottom: 10px;">
-                <div style="display: flex; align-items: center;">
-                    <span>@libro.nombre</span>
-                    <form asp-controller="Libros" asp-action="ViewComments" method="get" style="margin-left: auto;">
-                        <input type="hidden" name="bookId" value="@libro.id" />
-                        <button type="submit">Seleccionar</button>
-                    </form>
-                </div>
-            </li>
-        }
+<div class="container">
+    <ul class="progressbar">
+        <li >Autores</li>
+        <li class="active">ibros</li>
+        <li>Comentarios Existentes</li>
+        <li>Nuevo Comentario</li>
     </ul>
+
 </div>
 
+<div>
+    <!-- Encabezado con información del autor -->
+    <div class="border p-3 mb-3">
+        <p class="tit mb-2">Autor: @ViewBag.AuthorName</p>
+    </div>
+
+    <!-- Sección para seleccionar libros del autor -->
+    <div class="border p-3">
+        <p class="tit mb-2">Seleccione el libro del autor:</p>
+        <!-- Lista sin estilos de íconos -->
+        <ul class="list-unstyled">
+            @foreach (var libro in Model)
+            {
+                <li class="mb-2">
+                    <!-- Flex para alinear elementos horizontalmente -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>@libro.nombre</span>
+                        <!-- Formulario para seleccionar un libro -->
+                        <form asp-controller="Libros" asp-action="ViewComments" method="get">
+                            <!-- Entrada oculta para el ID del libro -->
+                            <input type="hidden" name="bookId" value="@libro.id" />
+                            <!-- Botón estilizado -->
+                            <button type="submit" class="btn btn-outline-success">Seleccionar</button>
+                        </form>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
