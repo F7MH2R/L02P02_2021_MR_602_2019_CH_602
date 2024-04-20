@@ -1,5 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<L02P02_2021_MR_602_2019_CH_602.Models.Libros>
 @{
+    ViewBag.Title = "Libros";
 }
+
+<div style="border: 1px solid black; padding: 10px; margin-bottom: 20px;">
+    <p style="margin-bottom: 10px;">Autor: @ViewBag.AuthorName</p>
+</div>
+
+<div style="border: 1px solid black; padding: 10px;">
+    <p style="margin-bottom: 10px;">Seleccione el libro del autor:</p>
+    <ul style="list-style-type: none; padding: 0;">
+        @foreach (var libro in Model)
+        {
+            <li style="margin-bottom: 10px;">
+                <div style="display: flex; align-items: center;">
+                    <span>@libro.nombre</span>
+                    <form asp-controller="Libros" asp-action="ViewComments" method="get" style="margin-left: auto;">
+                        <input type="hidden" name="bookId" value="@libro.id" />
+                        <button type="submit">Seleccionar</button>
+                    </form>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+
