@@ -17,7 +17,8 @@ namespace L02P02_2021_MR_602_2019_CH_602.Controllers
         {
             var autores = _context.autores.ToList(); // Recuperar todos los autores desde la base de datos
 
-            return View(autores); // Pasar los autores a la vista
+            return View(autores); 
+            // Pasar los autores a la vista
         }
     }
 }

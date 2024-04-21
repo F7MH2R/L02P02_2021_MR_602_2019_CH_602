@@ -93,3 +93,8 @@ body {
             .progressbar li.active + li:after {
                 background-color: #55b776;
             }
+.tit {
+    color: darkcyan;
+    font-size: 20px;
+    font-weight: bold; /* O font-weight: 700 */
+}
