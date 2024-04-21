@@ -14,6 +14,7 @@ namespace L02P02_2021_MR_602_2019_CH_602.Controllers
         }
 
         // Acción para mostrar los comentarios existentes de un libro
+
         public IActionResult ViewComments(int libroId)
         {
             // Obtener el libro correspondiente al ID proporcionado
@@ -41,6 +42,7 @@ namespace L02P02_2021_MR_602_2019_CH_602.Controllers
             // Pasar los comentarios a la vista
             return View(comentarios);
         }
+
 
         // Acción para mostrar el formulario de creación de comentarios
         public IActionResult CrearComentario(int libroId)
